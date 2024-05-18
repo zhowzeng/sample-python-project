@@ -1,7 +1,14 @@
 import argparse
+import os
+
+from dotenv import load_dotenv
 
 
-if __name__ == "__main__":
+load_dotenv()
+ENV = os.environ["ENV"]
+
+
+def cli():
     parser = argparse.ArgumentParser(description='My Git-like CLI')
     subparsers = parser.add_subparsers(dest='command', help='sub-command help')
 
@@ -19,6 +26,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    print(f"{ENV=}")
+
     match args.command:
         case 'init':
             print(f'Initializing repository in {args.directory}')
@@ -26,3 +35,4 @@ if __name__ == "__main__":
             print(f'Adding files: {args.files}')
         case 'commit':
             print(f'Committing with message: {args.message}')
+

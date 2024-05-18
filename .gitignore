@@ -163,4 +163,4 @@ cython_debug/
 .vscode/
 
 # temp file
-/tmp/
+tmp/

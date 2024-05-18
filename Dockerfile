@@ -12,8 +12,9 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir --progress-bar off -r requirements.txt
 
 COPY . .
+RUN pip install .
 
 RUN chown -R $GID:$UID /usr/src/app
 USER nonroot
 
-ENTRYPOINT [ "python", "./main.py"]
+ENTRYPOINT [ "my-cli"]
