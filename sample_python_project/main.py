@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-ENV = os.environ["ENV"]
+ENV = os.environ.get("ENV", None)
 
 
 def cli():

@@ -5,21 +5,30 @@
 ### Installation
 
 ```bash
-# virtual environment
+# use virtual environment
 python3.10 -m venv .venv
 source .venv/bin/activate
+
 # install dependencies
 pip install -U pip
 pip install -r requirements.txt
-# editable self install
+
+# editable self installation
 pip install -e .
 
+# environment variable
 cp .env.copy .env
 ```
 
 ### Adding dependency
 
-Edit `[project]` -> `dependencies` in `pyproject.toml`. 
+Edit `[project]` -> `dependencies` in `pyproject.toml`.
+
+```bash
+pip install -e .
+# or
+pip install <package>
+```
 
 ### Freezing dependencies
 

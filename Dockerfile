@@ -17,4 +17,4 @@ RUN pip install .
 RUN chown -R $GID:$UID /usr/src/app
 USER nonroot
 
-ENTRYPOINT [ "my-cli"]
+CMD [ "my-cli", "-h" ]
