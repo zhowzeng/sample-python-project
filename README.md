@@ -22,7 +22,7 @@ cp .env.copy .env
 
 ### Adding dependency
 
-Edit `[project]` -> `dependencies` in `pyproject.toml`.
+Edit `dependencies` in `pyproject.toml`.
 
 ```bash
 pip install -e .
@@ -53,10 +53,7 @@ my-cli <command>
 
 ```bash
 # build
-docker build -t <image-tag> --build-arg "GID=$(id -g)" --build-arg "UID=$(id -u)" .
+docker build -t <image> --build-arg "GID=$(id -g)" --build-arg "UID=$(id -u)" .
 # run command
-docker run -it -u $(id -g):$(id -u) --env-file .env <image-tag> <command>
-
-# run bash for debugging
-docker run -it -u $(id -g):$(id -u) --entrypoint bash <image-tag> <command>
+docker run -it -u $(id -g):$(id -u) --env-file .env <image> my-cli <command>
 ```
