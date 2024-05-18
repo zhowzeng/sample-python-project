@@ -1,0 +1,6 @@
+README.md
+Dockerfile
+pyproject.toml
+LICENSE
+.venv/
+/tmp/
