@@ -43,17 +43,17 @@ pip install -U build
 python -m build
 ```
 
-## Usage
+## Local Usage
 
 ```bash
-my-cli <command>
+mygit <command>
 ```
 
 ## Containerization
 
 ```bash
 # build
-docker build -t <image> --build-arg "GID=$(id -g)" --build-arg "UID=$(id -u)" .
+docker build -t zhow/mygit --build-arg "GID=$(id -g)" --build-arg "UID=$(id -u)" .
 # run command
-docker run -it -u $(id -g):$(id -u) --env-file .env <image> my-cli <command>
+docker run -it -u $(id -g):$(id -u) --env-file .env zhow/mygit mygit <command>
 ```

@@ -17,4 +17,4 @@ RUN pip install .
 RUN chown -R $GID:$UID /usr/src/app
 USER nonroot
 
-CMD [ "my-cli", "-h" ]
+CMD [ "mygit", "-h" ]

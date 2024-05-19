@@ -13,7 +13,7 @@ build-backend = "setuptools.build_meta"
 packages = ["sample_python_project"]
 
 [project.scripts]
-my-cli = "sample_python_project.main:cli"
+mygit = "sample_python_project.main:cli"
 
 [tool.black]
 line-length = 100
