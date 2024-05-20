@@ -2,7 +2,8 @@
 name = "sample-python-project"
 version = "0.0.1"
 dependencies = [
-    "python-dotenv"
+    "python-dotenv",
+    "snakeviz"
 ]
 
 [build-system]

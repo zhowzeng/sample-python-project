@@ -36,3 +36,6 @@ def cli():
         case 'commit':
             print(f'Committing with message: {args.message}')
 
+
+if __name__ =="__main__":
+    cli()
