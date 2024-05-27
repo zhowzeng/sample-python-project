@@ -14,7 +14,7 @@ pip install -U pip
 pip install -r requirements.txt
 
 # editable self installation
-pip install -e .
+pip install -e ".[dev]"
 
 # environment variable
 cp .env.copy .env

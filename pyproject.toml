@@ -1,10 +1,11 @@
 [project]
 name = "sample-python-project"
 version = "0.0.1"
-dependencies = [
-    "python-dotenv",
-    "snakeviz"
-]
+requires-python = ">= 3.10"
+dependencies = ["python-dotenv"]
+
+[project.optional-dependencies]
+dev = ["pytest", "coverage", "snakeviz"]
 
 [build-system]
 requires = ["setuptools"]
